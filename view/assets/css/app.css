@@ -1,0 +1,122 @@
+
+*{
+	margin:0;
+	padding: 0;
+}
+
+body {
+	background-color: #f3f8ff;
+}
+
+.container-fixo {
+
+	position: fixed;
+	left:0;
+	top:0;
+	width: 100%;
+	height: 100%;
+}
+
+.nav {
+	width: 100%;
+	min-height: 50px;
+	box-shadow: 1px 1px #f3f8ff;
+}
+
+.nav.nav-default{
+	background-color: #ffffff;
+	border:1px solid rgba(0,0,0,0.1);
+	
+}
+.nav.fixo-top {
+	position: fixed;
+	top:0;
+	left: 0;
+	/*z-index: 99999999;*/
+}
+
+.barra {
+	padding:2px;
+}
+
+.barra.fixa {
+	position: fixed;
+	top:0;
+	height: 100%;
+}
+
+.barra.fixa.left {	
+	left: 0;
+}
+
+.barra.fixa.right {
+	right: 0;
+}
+
+.barra-default {
+	background-color: #273140;
+	width: 0;	
+	-webkit-transition: all .2s linear;
+	-o-transition: all .2s linear;
+	transition: all .2s linear;
+}
+
+.expandido .barra.barra-default {
+	width: 250px;
+	-webkit-transition: all .2s linear;
+	-o-transition: all .2s linear;
+	transition: all .2s linear;
+}
+
+.expandido .container-nav {
+	padding-left: 250px;
+	-webkit-transition: all .2s linear;
+	-o-transition: all .2s linear;
+	transition: all .2s linear;
+}
+
+.container-nav {
+	padding:5px 8px;
+	padding-left: 0;
+	-webkit-transition: all .2s linear;
+	-o-transition: all .2s linear;
+	transition: all .2s linear;
+}
+
+.btn {
+	min-height: 2em;
+    min-width: 4em;
+    padding-bottom: 1px;
+}
+
+.btn.btn-default {
+    -webkit-appearance: none;
+    -webkit-user-select: none;
+    background-image: -webkit-linear-gradient(#ededed, #ededed 38%, #dedede);
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 2px;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08), inset 0 1px 2px rgba(255, 255, 255, 0.75);
+    color: #444;
+    font: inherit;
+    margin: 0 1px 0 0;
+    outline: none;
+    text-shadow: 0 1px 0 rgb(240, 240, 240);
+
+}
+
+.icone {
+	padding:10px 15px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	display: inline-block;
+	background-position: top;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	height: 30px;
+	width: 30px;
+}
+
+.icone.menu {
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAsElEQVRYR+2W0QmAMAxE2w0cQTfSUZzEUXQj3cAVTKAFETVcEM6PCMWfkLy0l2tzIn+ZXD95AXoBn2S1pYFN/qOsBW3IA6DF54dCAwrhAVhPnV85dCc6ZBdQgEaS70YBKCcULIXpANo89QgUgC7CCkEbQ0TkZiwqQjMhGuAFCCesd0A44Z3mIF1BwaVaOGE4IWp2r/EeEdKPgH4dU8eQ/iSjA8SbsM409UHyCyP6DOIAye0wIRn+y58AAAAASUVORK5CYII=);
+}
