@@ -1,5 +1,6 @@
-RewriteEngine on
+RewriteEngine On
+RewriteBase /app
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^([a-zA-Z0-9_-]+)$ index.php?slug=$1 [L,N]
+RewriteRule ^(.*)$ index.php?slug=$1 [L,NC]
