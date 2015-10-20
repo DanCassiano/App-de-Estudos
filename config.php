@@ -6,6 +6,9 @@
 	define("APP_ROOT", __DIR__ );
 
 
+	define("BASE_URL", "http://localhost/app");
+
+
 	/**
 	 * Funcao de autoload de classes
 	 */
