@@ -199,3 +199,117 @@ body {
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
+
+.conteudo {
+	padding: 60px 10px 10px 10px;
+	-webkit-transition: all .4s linear;
+	-o-transition: all .4s linear;
+	transition: all .4s linear;
+}
+
+.expandido .conteudo {
+	padding-left: 250px;
+	-webkit-transition: all .4s linear;
+	-o-transition: all .4s linear;
+	transition: all .4s linear;
+}
+
+.e-mail {
+	overflow: auto;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.tex-left  {
+	text-align: left;
+}
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row {
+	/*padding-left: 15px;*/
+	/*padding-right: 15px;*/
+	position: relative;
+	background-color: #f3f8ff;
+}
+
+.row:hover {
+  	border: 2px solid #4BADD0; 	
+}
+
+.row:hover .row-handle {
+	display: block;
+}
+
+.row:before {
+	content:  "estrutura";
+	display: none;
+	background-color: #4BADD0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 5px 6px;
+	font-size: 10px;
+	color: #fff;
+}
+.row:hover:before {
+	display: block;
+}
+
+.row .row-container {
+	display: inline-block;	
+}
+
+.row .row-handle{	
+	display: none;
+	position: absolute;
+	right: 0;
+	top:45%;
+	background-color: #4BADD0;
+	padding: 5px 8px;	
+	color: #fff;
+	cursor: move;
+}
+
+.row-del,
+.row-dupl {
+	position: absolute;	
+	bottom: 0px;
+	background-color: #4BADD0;
+	padding: 5px 8px;
+	color: #fff;
+	display: none;
+	cursor: pointer;
+}
+
+.row:hover .row-del,
+.row:hover .row-dupl {
+	display: block;
+}
+
+.row-del {
+	right: -1px;
+}
+
+.row-dupl {
+	right: 28px;
+}
+
+.row .mail-move {
+	background-color: red;
+}
+
+
+
+.ui-selecting { background: #FECA40; }
+.ui-selected { background: #F39814; color: white; }
