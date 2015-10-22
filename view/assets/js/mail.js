@@ -9,26 +9,48 @@
 	}
 
 	var mail = MAIL.prototype;
+		mail.row = null;
 
 		mail._init = function(){
 			
+			this.mail = $(".row");
+
 			this._sortable();	 
     		this._clickClone();    
-    		this._clickDel();		
+    		this._clickDel();	
+    		this._rowHover();
+    		this._imgHover();	
 		}
 
 		mail._clickClone = function(){
 			var app = this;
-			$(".row").on('click','.row-dupl', function(){
+			app.mail.on('click','.row-dupl', function(){
 				app._clone(  $(this).parent() );
 			})
 		}
 
 		mail._clickDel = function(){
 			var app = this;
-			$(".row").on('click','.row-del', function(){
+			app.mail.on('click','.row-del', function(){
 				app._del( this );				
 			})
+		}
+
+		mail._rowHover = function(){
+
+			this.mail.hover(function(){				
+				$(this).addClass('row-hover');
+			},
+			function(){				
+				$(this).removeClass('row-hover');
+			})
+		}
+
+		mail._imgHover = function(){
+			$('.img').hover(function(){		
+					$(this).parent().parent().removeClass('row-hover');
+					console.log( $(this).parent().parent() )
+			});
 		}
 
 		mail._sortable = function(){
@@ -38,7 +60,7 @@
       			handle: ".row-handle",
     		});
     		$( ".e-mail" ).disableSelection(); 
-    		
+
 		}
 
 		mail._clone = function( elemento ){

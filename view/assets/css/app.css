@@ -243,11 +243,12 @@ body {
 	background-color: #f3f8ff;
 }
 
-.row:hover {
-  	border: 2px solid #4BADD0; 	
+
+.row.row-hover {
+	border: 2px solid #4BADD0; 		
 }
 
-.row:hover .row-handle {
+.row.row-hover .row-handle {
 	display: block;
 }
 
@@ -262,7 +263,7 @@ body {
 	font-size: 10px;
 	color: #fff;
 }
-.row:hover:before {
+.row.row-hover:before {
 	display: block;
 }
 
@@ -302,13 +303,18 @@ body {
 }
 
 .row-dupl {
-	right: 28px;
+	right: 25px;
 }
 
 .row .mail-move {
 	background-color: red;
 }
 
+
+.row .img:hover {
+
+	border: 2px solid #4BADD0;
+}
 
 
 .ui-selecting { background: #FECA40; }
