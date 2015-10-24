@@ -418,3 +418,52 @@ body {
 .lista-eventos {
 	width: 33.333%
 }
+
+.select {
+	display: inline-block;
+	border:1px solid #E9E3E3;
+	padding: 5px 8px;
+	background-color: #F0E7E8;
+	border-radius: 2px;
+	max-height: 20px;
+	position: relative;
+}
+
+.select>a{
+	padding-right: 10px;
+	padding-left: 5px;
+	text-decoration: none;
+	color:#A4A4AC;
+}
+
+.select>a i {
+	float: right;
+}
+
+.select.select-aberta .select-lista{
+	display: block;
+}
+
+.select .select-lista {
+	display: none;
+	background-color: #F0E7E8;	
+	position: absolute;
+	top: 31px;
+	left: 0;
+}
+
+.select .select-lista li {
+	list-style: none;
+	padding: 5px 10px;
+	white-space: nowrap;
+}
+
+.select .select-lista li:hover {
+	background-color: #fff;
+}
+
+.select .select-lista li a {
+	text-decoration: none;
+	color: #000;
+
+}

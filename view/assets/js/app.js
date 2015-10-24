@@ -42,7 +42,7 @@
 				var conteudo = tabPage.find(".tabs-conteudo div");					
 					$(conteudo[0]).show();
 
-				var li = tabPage.find('li');
+				var li = tabPage.find('>ul li');
 					li.on('click','a', function(e){
 						e.preventDefault();
 						
@@ -60,4 +60,48 @@
 
 		}
 	window.tabs = new Tabs();
+
+
+	var Select = function(){
+		var sele = this;
+		$(function(){
+			sele._init();
+		})
+	}
+
+	var select = Select.prototype;
+		select._init = function(){
+
+			var selectElem = $("[data-app='select'], .select ");	
+
+			selectElem.each(function(i,d){				
+
+				var selectLista = null,
+					element = $(d),
+					valorSelecionado = null;
+
+				if( element.attr('id') == undefined)			
+					element.attr('id', "select"+Math.floor(Math.random() * 100) );
+
+
+				selectLista = element.find('.select-lista');
+				element.width( selectLista.outerWidth() );			
+
+				selectLista.on('click', 'a',function(e){
+					e.preventDefault();
+					$(this).closest('.select').removeClass('select-aberta');
+					valorSelecionado = $(this).attr('href');
+					
+					element.find(">a").text( $(this).text() ).attr('href', $(this).attr('href') );
+				})
+
+				element.on('click','>a', function(e){
+					e.preventDefault();
+					$(this).parent().toggleClass('select-aberta');
+				});
+			})
+
+		}
+	window.select = new Select();
+
 })(window,jQuery);
