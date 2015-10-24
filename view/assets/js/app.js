@@ -104,4 +104,26 @@
 		}
 	window.select = new Select();
 
+
+	var Slide = function(){
+		var slide = this;
+		$(function(){
+			slide._init();
+		});
+	}
+
+	var slide = Slide.prototype;
+		slide._init = function(){
+
+			var slideElement = $("[data-app='slide'], .slide");
+				slideElement.each(function(i,d){
+						
+						$(d).on('click','.slide-button', function(e){
+							e.preventDefault();
+							$(this).parent().toggleClass('off');
+						})
+				});
+		}
+	window.slide = new Slide();
+
 })(window,jQuery);

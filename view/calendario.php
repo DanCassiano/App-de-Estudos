@@ -18,6 +18,10 @@
 					<li><a href="">Evento 5</a><i class="zmdi zmdi-delete"></i></li>
 				</ul>
 			</div>
+
+			<div class="slide-pin">
+				<a href="#" class="slide-button"></a>
+			</div>
 			
 			<div class="select" data-app="select">
 				<a href="#">Selecionado <i class="zmdi zmdi-caret-down"></i></a>
@@ -33,19 +37,11 @@
 				</div>
 			</div>
 
-			<div class="select" data-app="select">
-				<a href="#">Selecionado <i class="zmdi zmdi-caret-down"></i></a>
-				<div class="select-lista">
-					<ul>
-						<li><a href="#">Item 1</a></li>
-						<li><a href="#">Item 2</a></li>
-						<li><a href="#">Item 3</a></li>
-						<li><a href="#">Item 4</a></li>
-						<li><a href="#">Item  asd dsa a d as d asd</a></li>
-						<li><a href="#">Item  sdas dasda sder we ref ew</a></li>
-					</ul>
-				</div>
+			<div class="slide">
+				<a href="#" class='slide-button'></a>	
 			</div>
+
+			
 
 		</div>
 		<div id="tab2" class="tab-content">

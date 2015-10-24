@@ -465,5 +465,56 @@ body {
 .select .select-lista li a {
 	text-decoration: none;
 	color: #000;
+}
 
+
+.slide {
+	display: inline-block;
+	padding: 2px;
+	height: 25px;
+	background-color: #3791B4;
+	width: 60px;
+	border-radius: 4px;
+	position: relative;
+}
+
+.slide a {
+	display: block;
+	width: 25px;
+	height: 25px;
+	background-color: #fff;
+	border-radius: 4px;
+	position: absolute;
+	top:2px;		
+	left:2px;
+	-webkit-transition: left .2s linear;
+	-o-transition: left .2s linear;
+	transition: left .2s linear;
+}
+
+.slide.off a {
+	-webkit-transition: left .2s linear;
+	-o-transition: left .2s linear;
+	transition: left .2s linear;
+	left: 36px;
+}
+
+
+.slide-pin {
+	width: 200px;
+	height: 5px;
+	background-color: #3791B4;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	position: relative;
+}
+
+.slide-pin .slide-button {
+	width: 20px;
+	height: 20px;
+	background-color: #3791B4;
+	border-radius: 20px; 
+	position: absolute;
+	top:-10px;
+	left: 10px;
 }
