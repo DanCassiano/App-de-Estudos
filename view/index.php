@@ -55,7 +55,7 @@
 				$include = "";
 				switch ($ativo) {
 				 	case 'calendario':
-				 		
+				 		$include = "calendario.php";
 				 		break;
 				 	case 'mail':
 				 		$include = "mail.php";

@@ -3,6 +3,7 @@
 		<div class="row-container ">
 			<div class="img">
 				<img src="view/assets/imagem/placeholder_01.png" height="280" width="500">
+				<a class="row-handle" href="#"><i class="zmdi zmdi-arrows"></i></a>
 			</div>
 		</div>
 		<a class="row-handle" href="#"><i class="zmdi zmdi-arrows"></i></a>

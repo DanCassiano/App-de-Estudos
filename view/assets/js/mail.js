@@ -48,8 +48,9 @@
 
 		mail._imgHover = function(){
 			$('.img').hover(function(){		
-					$(this).parent().parent().removeClass('row-hover');
-					console.log( $(this).parent().parent() )
+					$(this).parent().parent().removeClass('row-hover');					
+			},function(){
+				$(this).parent().parent().addClass('row-hover');	
 			});
 		}
 

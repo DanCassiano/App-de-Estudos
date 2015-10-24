@@ -241,6 +241,7 @@ body {
 	/*padding-right: 15px;*/
 	position: relative;
 	background-color: #f3f8ff;
+	overflow: hidden;
 }
 
 
@@ -248,7 +249,11 @@ body {
 	border: 2px solid #4BADD0; 		
 }
 
-.row.row-hover .row-handle {
+.row-handle {
+	display: none;
+}
+
+.row.row-hover > .row-handle {
 	display: block;
 }
 
@@ -316,6 +321,100 @@ body {
 	border: 2px solid #4BADD0;
 }
 
+.img {
+	position: relative;
+}
+
+.img:hover .row-handle {
+	display: block;
+}
+
 
 .ui-selecting { background: #FECA40; }
 .ui-selected { background: #F39814; color: white; }
+
+
+.tabs>ul {
+	width: 100%;
+	border-bottom: 1px solid #4BADD0;
+}
+
+.tabs.tabs-right>ul {
+	text-align: right;
+}
+
+.tabs>ul li {
+	list-style: none;
+	display: inline-block;
+	padding: 10px 15px;
+}
+.tabs>ul li.ativa {
+	background-color: #3C97B6;
+}
+
+.tabs>ul li a {
+	text-decoration: none;
+	color: #000;
+}
+
+.tabs .tabs-conteudo>div {
+	display: inline-block;
+	padding: 5px;
+}
+
+.tab-content {
+	display: none;
+	width: 100%;
+}
+
+
+.painel {
+	margin-bottom: 5px;
+}
+
+.painel.painel-padrao {
+	border: 1px solid #f3f8ff;
+	box-shadow: 1px 1px #f3f8ff;
+}
+
+.painel .painel-titulo {
+	text-align: left;
+}
+
+
+.painel .lista {
+	text-align: left;
+}
+
+.lista {
+	width: 100%;
+	min-height: 1px;
+	margin-bottom: 10px;
+}
+
+.lista li {
+	list-style: none;
+	padding: 8px 10px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 100%;
+}
+
+.lista ul {
+	padding-left: 0;
+}
+
+.lista li a {
+	text-decoration: none;
+	margin-right: 10px;
+}
+
+.lista li i.zmdi {
+	float: right;
+}
+
+
+.lista-eventos {
+	width: 33.333%
+}
