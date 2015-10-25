@@ -523,4 +523,5 @@ body {
 
 .slide-pin .slide-button:hover {
 	background-color: #fff;
+	box-shadow: 1px 1px #3791B4;
 }

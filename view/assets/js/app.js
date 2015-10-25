@@ -128,14 +128,14 @@
 
 
 	var SlidePin = function(){
-		var sp 	  = this,
-			slide = null;
+		var sp 	  = this;
 		$(function(){
 			sp._init();
 		});		
 	}
 
 	var slidepin = SlidePin.prototype;
+		slidepin.slide = null;
 
 		slidepin._init = function(){
 				var sp = this;
@@ -154,17 +154,22 @@
 
 		slidepin._onMouseDown = function(e){
 
-			console.log( e.target, e.target.className )
 
-			if( e.target.className == 'slide-pin')
+			// console.log( e.target.className )
+			if( e.target.className === 'slide-button'){
+				slidepin.slide = $(e.target);
+			}
 		}
 
 		slidepin._onMouseUp = function(e){
-
+			slidepin.slide = null;
 		}
 
 		slidepin._onMouseMove = function(e){
-
+				if( slidepin.slide != null ) {
+						console.log( e.clientX );
+						slidepin.slide.css('left', ( e.clientX - slidepin.slide.outerWidth() ) + "px");					
+				}
 		}
 
 
