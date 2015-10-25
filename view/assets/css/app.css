@@ -515,6 +515,12 @@ body {
 	background-color: #3791B4;
 	border-radius: 20px; 
 	position: absolute;
-	top:-10px;
+	top:-9px;
 	left: 10px;
+	box-shadow: 1px 1px rgba(255,255,255,.3);
+	border:1px solid #3791B4;
+}
+
+.slide-pin .slide-button:hover {
+	background-color: #fff;
 }
