@@ -362,10 +362,30 @@
 						$(this).prop('checked', !$(this).prop('checked'));
 					});
 				})
+		}		
+	window.grid = new Grid();
+
+	var Form = function(){
+
+	}
+
+	var form = Form.prototype;
+		
+		form.__campos = [];
+		form.__elemento = null;
+
+		form.init = function( elemento ){
+			this.__elemento = $(elemento).hide();
 		}
 
-		
-	window.grid = new Grid();
+		form.setCampos = function( campos ){
+
+		}
+
+		form.show = function(){
+			this.__elemento.show();
+		}
+	window.form = new Form();
 
 	function ExtractNumber(value)
 	{

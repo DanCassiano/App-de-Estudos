@@ -625,7 +625,7 @@ body {
 }
 
 .grid-table-bordered td,.grid-table-bordered th {
-    border: 1px solid #ddd!important
+    border: 1px solid #ddd!important;
 }
 
 .toolbar-table {
@@ -651,4 +651,13 @@ body {
     width: 16px;
     min-width: 16px;
     margin-top: 2px;
+}
+
+
+.app-form {
+	border: 1px solid #e1e1e1;
+	min-height: 20px;
+	width: 80%;
+	position: fixed;
+	top: 10%;
 }
