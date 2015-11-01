@@ -13,7 +13,7 @@
 
 		mail._init = function(){
 			
-			this.mail = $(".row");
+			this.mail = $(".row-mail");
 
 			this._sortable();	 
     		this._clickClone();    
