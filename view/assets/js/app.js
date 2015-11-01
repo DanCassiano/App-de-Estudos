@@ -40,6 +40,7 @@
 					return false;
 
 				var conteudo = tabPage.find(".tabs-conteudo div");					
+					tabPage.find('.tab-content').hide();
 					$(conteudo[0]).show();
 
 				var li = tabPage.find('>ul li');
@@ -154,22 +155,27 @@
 
 		slidepin._onMouseDown = function(e){
 
-
 			// console.log( e.target.className )
 			if( e.target.className === 'slide-button'){
 				slidepin.slide = $(e.target);
+				slidepin.slide.addClass('slide-mais');
 			}
 		}
 
 		slidepin._onMouseUp = function(e){
+			if( slidepin.slide != null )
+				slidepin.slide.removeClass('slide-mais');
 			slidepin.slide = null;
 		}
 
 		slidepin._onMouseMove = function(e){
-				if( slidepin.slide != null ) {
-						console.log( e.clientX );
-						slidepin.slide.css('left', ( e.clientX - slidepin.slide.outerWidth() ) + "px");					
-				}
+			if( slidepin.slide != null ) {												
+				var posicao = parseInt( slidepin.slide.css('left') );
+				var largura = parseInt( slidepin.slide.parent().outerWidth() );			
+
+					slidepin.slide.css('left', ( e.clientX - slidepin.slide.outerWidth() ) + "px");		
+				
+			}
 		}
 
 
@@ -180,6 +186,62 @@
 		}	
 
 	window.slidepin = new SlidePin();
+
+
+
+	var Calendario = function(){
+		var ca = this;
+		$(function(){
+			ca.__init();
+		})
+	}
+
+	var calendario = Calendario.prototype;
+		
+		calendario.elemento = null;
+		calendario.__init = function(){
+
+			this.elemento = $(".calendario, [data-app='calendario']");
+			this.elemento.append( this.renderDias( 10 ) );
+
+		}
+
+		calendario.renderDias = function( mes ){
+			var m = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
+				html = "";
+
+				this.elemento.height( 450 );
+
+				var elementoPai = this.elemento.height(),
+					altura 		= 18;
+					console.log( altura , elementoPai * 6)
+
+				var pos = 0;
+				for( var i = 0; i < 6; i ++ ) {
+
+					html += "<div class='cal-linha' style='height: "+altura+"%; top: "+pos+"%'>";	
+
+						pos += altura;
+
+						html += "<table class='cal-table' cellpadding=\"0\" cellspacing='0'>";
+						html += "<tbody>";
+						html += "<tr>";
+						for( var d = 0 ; d < 7; d++)
+							html += "<td class='cal-dia' ></td>";
+						html += "</tr>";
+						html += "</tbody>";
+						html += "</table>";
+
+					html += "</div>";
+				}
+
+			
+				
+			
+			return html;
+		}
+
+	window.calendario = new Calendario();
 
 	function ExtractNumber(value)
 	{
