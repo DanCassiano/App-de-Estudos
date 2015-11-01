@@ -5,6 +5,7 @@
 	<title><?php echo $this->getTitulo() ?></title>
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="<?php echo BASE_URL ?>/view/assets/css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" href="<?php echo BASE_URL ?>/view/assets/css/bootstrap.css">
 	<link rel="stylesheet" href="<?php echo BASE_URL ?>/view/assets/css/app.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL ?>/view/assets/css/jquery-ui.min.css">
 	<base href="<?php echo BASE_URL ?>/" />
@@ -25,6 +26,7 @@
 				$menu1 = "";
 				$menu2 = "";
 				$menu3 = "";
+				$menu4 = "";
 
 				switch ($ativo) {
 				 	case 'calendario':
@@ -35,7 +37,10 @@
 				 		break;
 				 	case 'config':
 				 		$menu3 = "active";
-				 		break;				 	
+				 		break;	
+				 	case 'site':
+				 		$menu4 = "active";
+				 		break;
 				}
 			?>
 			<ul class="menu menu-app">
@@ -44,6 +49,9 @@
 				</li>
 				<li class="<?php echo $menu2 ?>">
 					<a href="<?php echo BASE_URL ?>/app-admin/mail"><i class="zmdi zmdi-mail-send"></i>mail</a>
+				</li>
+				<li class="<?php echo $menu4 ?>">
+					<a href="<?php echo BASE_URL ?>/app-admin/site"><i class="zmdi zmdi-layers"></i>Site</a>
 				</li>
 				<li class="<?php echo $menu3 ?>">
 					<a href="<?php echo BASE_URL ?>/app-admin/config"><i class="zmdi zmdi-settings"></i>configurações</a>
@@ -61,7 +69,10 @@
 				 		$include = "mail.php";
 				 		break;
 				 	case 'config':				 		
-				 		break;				 	
+				 		break;		
+				 	case "site":
+				 		$include = "site.php";
+				 		break;
 				}
 
 				include $include;
@@ -72,5 +83,6 @@
 	<script src="<?php echo BASE_URL ?>/view/assets/js/jquery-ui.min.js"></script>
 	<script src="<?php echo BASE_URL ?>/view/assets/js/app.js"></script>
 	<script src="<?php echo BASE_URL ?>/view/assets/js/mail.js"></script>
+	
 </body>
 </html>

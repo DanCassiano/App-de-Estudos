@@ -45,7 +45,7 @@
 
 		</div>
 		<div id="tab2" class="tab-content">
-			
+			<div class="calendario"></div>
 		</div>		
 	</div>
 </div>
