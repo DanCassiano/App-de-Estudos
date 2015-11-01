@@ -560,3 +560,95 @@ body {
 .calendario .cal-table .cal-dia {
 	border-left: 1px solid #ddd;
 }
+
+
+.app-grid {
+	width: 100%;
+	/*min-height: 200px;*/
+	box-shadow: 1px 1px rgba(255,255,255,0.8);
+	border: 1px solid #ddd;
+}
+
+
+.app-grid .grid-toolbar {	
+	
+	/*height: 30px;*/
+	border-bottom: 1px solid #e1e1e1;
+	padding: 5px 15px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 100%;
+}
+
+.app-grid .grid-footer {
+	border-top: 1px solid #e1e1e1;
+	padding: 5px 15px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 100%;	
+	line-height: 20px;
+	min-height: 20px;
+}
+
+.app-grid .grid-table {
+	width: 100%;
+    border-collapse: collapse!important;
+ 	table-layout: fixed;
+}
+
+.grid-table td,.grid-table th {
+    background-color: #fff;
+}
+
+.app-grid .grid-table tbody tr th ,
+.app-grid .grid-table tbody tr td {
+	padding: 10px 15px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	vertical-align: top;
+}
+
+.app-grid .grid-table tbody tr:hover th ,
+.app-grid .grid-table tbody tr:hover td {
+	background-color: #ccc;
+}
+
+
+.app-grid .grid-toolbar thead tr th:first-child,
+.app-grid .grid-toolbar thead tr td:first-child,
+.app-grid .grid-table tbody tr th:first-child ,
+.app-grid .grid-table tbody tr td:first-child {
+	width: 10%;
+}
+
+.grid-table-bordered td,.grid-table-bordered th {
+    border: 1px solid #ddd!important
+}
+
+.toolbar-table {
+	width: 100%;
+ 	table-layout: fixed; 	
+ 	padding: 3px 8px;
+ 	-webkit-box-sizing: border-box;
+ 	-moz-box-sizing: border-box;
+ 	box-sizing: border-box;
+}
+
+.toolbar-table input[type='checkbox'] {	    
+    color: #555;
+    clear: none;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 0;
+    height: 16px;
+    margin: -4px 4px 0 0;
+    outline: 0;
+    padding: 0!important;
+    text-align: center;    
+    width: 16px;
+    min-width: 16px;
+    margin-top: 2px;
+}

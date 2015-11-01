@@ -243,6 +243,130 @@
 
 	window.calendario = new Calendario();
 
+
+
+	var Grid = function(){
+		var g = this;		
+	}
+	
+	var grid = Grid.prototype;
+
+		grid.dados = [ 
+						["Ola mundo","oasdasdasd" ],
+						["Ola mundo2","oasdasdasd" ],
+						["Ola mundo3","oasdasdasd" ]
+					];
+
+		grid.__editFunction   = null;
+		grid.__removeFunction = null;
+		grid.g =null;
+
+		grid.setGrid = function( elemento ){
+			this.g =$( elemento );
+			this.__init( this.g );
+		}
+
+		grid.setOpt = function( operacao, callback ){
+
+			var grid = this;
+
+			if( operacao == 'editar')
+			{
+				$(grid.g, ".grid-table")
+							.on('click','a[href=#editar]',function(e){
+								e.preventDefault();					
+								callback( grid.dados[ $(this) .index() ] ,e);
+							})
+			}
+
+			if( operacao == 'remover')
+			{
+				$(this.g, ".grid-table")
+							.on('click','a[href=#remover]',function(e){
+								e.preventDefault();					
+								callback(this,e);
+							})
+			}
+
+		}
+
+		grid.__init = function(g){
+			
+				g.append( this.__renderToolbar( g.data('colum') ) );
+				g.append( this.__renderDados() );
+				g.append( this.__renderFooter() );	
+
+				this.__eventosToolbar();				
+		}		
+
+		grid.__renderToolbar = function( toolbar ){
+
+			var tooblarHtml = "";
+				toolbar = toolbar.replace('[','').replace(']','').split(',');			
+
+			if( typeof(toolbar) == 'object' ){
+
+				$.each( toolbar, function(i,v){
+					if( i == 0)
+						tooblarHtml += '<td> <input type="checkbox" /> </td>';
+
+					else
+						tooblarHtml += '<th><p>'+v+'</p></th>';				
+				});
+				
+				return '<div class="grid-toolbar">'+
+						'<table class="toolbar-table" >'+
+							'<thead>'+
+								'<tr>'+									
+									tooblarHtml+									
+								'</tr>'+
+							'</thead>'+
+					'</table>';
+					'</div>';
+			}
+		}
+
+		grid.__renderDados = function(){
+
+			var htmlDados = "";
+			$.each(this.dados, function(i,v){
+
+				htmlDados += "<tr>";
+				htmlDados += "<td><input type=\"checkbox\" /></td>";
+				$.each( v, function(j,k){
+					if( j == 0 )						
+						htmlDados += "<td><p>"+k+"</p><small><a href=\"#editar\">Editar</a>&nbsp;<a href=\"#remover\">Remover</a></small></td>";
+					else
+						htmlDados += "<td>"+k+"</td>";
+				})
+				htmlDados += "</tr>";
+			})
+
+
+			return '<table class="grid-table">'+
+						'<tbody>'+
+							htmlDados+
+						'</tbody>'+
+					'</table>';
+		}
+
+		grid.__renderFooter = function(){
+			return '<div class="grid-footer"></div>';
+		}
+
+		grid.__eventosToolbar = function(){
+			$(".grid-toolbar")
+				.on('click', "input[type=checkbox]",function(){						
+
+					$(".grid-table input[type=checkbox]").each(function(){
+						$(this).prop('checked', !$(this).prop('checked'));
+					});
+				})
+		}
+
+		
+	window.grid = new Grid();
+
 	function ExtractNumber(value)
 	{
     	var n = parseInt(value);	

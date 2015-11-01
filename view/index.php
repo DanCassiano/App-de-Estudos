@@ -60,7 +60,7 @@
 		</div>
 		<div class="conteudo">
 			<?php 
-				$include = "";
+				$include = "dashboard.php";
 				switch ($ativo) {
 				 	case 'calendario':
 				 		$include = "calendario.php";
@@ -83,6 +83,7 @@
 	<script src="<?php echo BASE_URL ?>/view/assets/js/jquery-ui.min.js"></script>
 	<script src="<?php echo BASE_URL ?>/view/assets/js/app.js"></script>
 	<script src="<?php echo BASE_URL ?>/view/assets/js/mail.js"></script>
+	<script src="<?php echo BASE_URL ?>/view/assets/js/dashboard.js"></script>
 	
 </body>
 </html>
